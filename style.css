@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "Stolzl";
+  src: url(./fonts/stolzl_light.otf);
+  font-weight: 300; /* Light */
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url(./fonts/stolzl_regular.otf);
+  font-weight: 400; /* Regular */
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url(./fonts/stolzl_bold.otf);
+  font-weight: 700; /* Bold */
+}
+
+@font-face {
+  font-family: "Stolzl";
+  src: url(./fonts/stolzl_medium.otf);
+  font-weight: 500; 
+}
+
+body {
+  margin: 0px;
+  background: #fafafa;
+  overflow-y: scroll;
+  padding: 0%;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding-top: 0px;
+}
+
+svg {
+  height: 1600px;
+  width: auto;
+  transition: transform 0.8s ease;
+  transform-origin: center center;
+}
+.grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 60%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+polygon {
+  fill: rgb(255, 0, 0); /* almost transparent */
+  pointer-events: all;
+  cursor: pointer;
+}
+
+#level-1-group:hover .glow {
+  opacity: 1;
+}
+
+#level-2-group:hover .glow {
+  opacity: 1;
+}
+
+#level-3-group:hover .glow {
+  opacity: 1;
+}
+
+#level-3-group:hover .glow {
+  opacity: 1;
+}
+
+/* Optional: reset others by default */
+.glow {
+  opacity: 0;
+  filter: blur(15px);
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+/* Cursor pointer on polygons */
+polygon {
+  cursor: pointer;
+}
+
+/* Popup base styles */
+.popup {
+  font-family: Stolz, sans-serif;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 2rem;
+  gap: 20px;
+  border-radius: 10px;
+  width: 550px;
+  height: auto;
+  box-shadow: 0 4px 10px rgba(20, 20, 20, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+#popup {
+  padding: 20px;
+}
+
+.pop-up-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: none;
+}
+
+#popup-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-block-end: 0px;
+  margin-block-start: 0px
+}
+
+#popup-content {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+  padding-top: 8px;
+  font-weight: 300;
+}
+
+.popup.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#popup-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  color: rgb(57, 57, 57);
+  font-size: 1.75rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.popup.level-1 {
+  background: rgba(255, 255, 255, 0.6); /* transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* frosted stroke */
+  backdrop-filter: blur(15px); /* main blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  color: rgb(106, 17, 133);}
+
+.popup.level-2 {
+  background: rgba(255, 255, 255, 0.6); /* transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* frosted stroke */
+  backdrop-filter: blur(15px); /* main blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  color: rgb(170, 23, 111);
+}
+
+.popup.level-3 {
+  background: rgba(255, 255, 255, 0.6); /* transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* frosted stroke */
+  backdrop-filter: blur(15px); /* main blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  color: rgb(225, 96, 15);
+}
+
+
+.popup.level-4 {
+  background: rgba(255, 255, 255, 0.6); /* transparent white */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* frosted stroke */
+  backdrop-filter: blur(15px); /* main blur effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  color: rgb(205, 163, 12);
+}
+
+
+.logo {
+  height: 75px;
+  width: auto;
+}
+
+.top-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 1000;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.039);
+  height: 70px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* pushes logos to far left and right */
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.date {
+  height: 30px;
+  width: auto;
+}
+
+.popup-bottom-right {
+  bottom: 20px;
+  right: 20px;
+  left: auto;
+}
+
+.popup-bottom-left {
+  bottom: 20px;
+  left: 20px;
+  right: auto;
+}
+

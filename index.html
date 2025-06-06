@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Interactive Zoomable SVG</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grid"><img src="grid.svg" alt=""></div>
+  <header class="top-header">
+    <div class="header-content">
+      <img src="./viva-tech.png" alt="Logo" class="logo" />
+      <img src="./date.svg" alt="Date" class="date">
+      </div>
+  </header>
+  <div id="popup" class="popup hidden">
+  <div class="pop-up-header">
+    <h2 id="popup-title">Level Title</h2>
+    <button id="popup-close" aria-label="Close popup">✕</button>
+  </div>
+  <p id="popup-content">Some detailed info here...</p>
+</div>
+</div>
+  <div class="map-container">
+    <div id="svg-wrapper"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
