@@ -118,14 +118,14 @@ polygon {
 }
 
 #popup-title {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-block-end: 0px;
   margin-block-start: 0px
 }
 
 #popup-content {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #1a1a1a;
   padding-top: 8px;
   font-weight: 300;
